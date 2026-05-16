@@ -2,14 +2,14 @@
 
 <odoo>
 
-    <record id="view_company_asset_tree" model="ir.ui.view">
-        <field name="name">company.asset.tree</field>
+    <record id="view_company_asset_list" model="ir.ui.view">
+        <field name="name">company.asset.list</field>
         <field name="model">company.asset</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name"/>
                 <field name="serial_number"/>
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -31,7 +31,7 @@
     <record id="company_asset_action" model="ir.actions.act_window">
         <field name="name">Company Assets</field>
         <field name="res_model">company.asset</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 
     <menuitem id="company_asset_root_menu"
